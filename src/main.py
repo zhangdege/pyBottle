@@ -12,7 +12,6 @@ def error404(error):
 # static files
 @route('/static/<filepath:path>')
 def server_static(filepath):
-    print(filepath)
     return static_file(filepath, root='../public')
 
 run(host='localhost', port=8080, debug=True)
